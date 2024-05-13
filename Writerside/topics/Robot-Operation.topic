@@ -6,6 +6,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
+    <p>
+        For specific robot operation guides, see:
+    </p>
+    <toc>
+
+    </toc>
+
     <chapter id="versions" title="Robot Code Versions">
         <p>Before any robot can be run, the code for that robot must first be deployed to it.
             Most of the robots have two versions of the code that can be downloaded, a competition version, and a public
@@ -87,7 +94,7 @@
         </note>
 
         <chapter id="driver-station" title="Using the Driver Station">
-            <procedure collapsible="true" default-state="expanded" id="usage" title="Basic Usage" type="steps">
+            <procedure id="usage" title="Basic Usage" type="steps">
                 <step>
                     Open the Driver Station application.
                     <img alt="image.png" src="image.png"/>
@@ -172,6 +179,41 @@
                     Ensure that the robot is turned on, and the lights on the robot radio are on.
                 </p>
                 <img alt="Robot Radio" height="198" src="RobotRadio.png" width="213"/>
+            </li>
+            <li>
+                <b>Robot won't move</b>
+                <p>
+                    If the robot isn't moving
+                    when the robot is
+                    <control>Enabled</control>
+                    and in the
+                    <control>TeleOperation</control>
+                    mode.
+                    The most common reason is
+                    that the controllers / joysticks are not setup correctly.
+                </p>
+                <p>
+                    Make sure that the correct controllers are connected, and
+                    they are in the correct port in the Driver Station.
+                    <img alt="DriverStationPorts.png" src="DriverStationPorts.png"/>
+                    You can test
+                    if a controller is working properly
+                    by pressing buttons on the controller
+                    and seeing if the Driver Station shows that the button is pressed.
+                </p>
+                <p>
+                    Some robots also contain different profiles, make sure that the correct profile is selected.
+                    These can generally be set through the Shuffleboard.
+                </p>
+            </li>
+
+            <li>
+                <b>Parts of the robot are not working</b>
+                <p>
+                    If only parts of the robot are not moving / working,
+                    the robot may have a mechanical, electrical or software issue.
+                    You may need someone experienced with the robot to debug the issue.
+                </p>
             </li>
         </list>
     </chapter>
