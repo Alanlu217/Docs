@@ -1,171 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic
-        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic id="Robot-Operation"
        title="Robot Operation"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-    <p>
-        For specific robot operation guides, see:
-    </p>
-    <toc>
-
-    </toc>
-
     <chapter id="versions" title="Robot Code Versions">
-        <p>Before any robot can be run, the code for that robot must first be deployed to it.
-            Most of the robots have two versions of the code that can be downloaded, a competition version, and a public
-            / outreach version.
-        </p>
-        <p>
-            The competition version will have the robot running at max power with all functions available.
-            The public version will have the robot running at a significantly slower speed and limited functionality.
-        </p>
-        <p>
-            These versions can be found in the robot-specific documentation, or in the release page under each robot's
-            GitHub repository.
-        </p>
+        <p>Before any robot can be run, the code for that robot must first be deployed to it. Most
+            of the robots have two versions of the code that can be downloaded, a competition version,
+            and a public / outreach version. </p>
+        <p> The competition version will have the robot running
+            at max power with all functions available. The public version will have the robot running at
+            a significantly slower speed and limited functionality. </p>
+        <p> These versions can be found
+            in the robot-specific documentation, or in the release page under each robot's GitHub
+            repository. </p>
     </chapter>
 
     <chapter id="deploying" title="Deploying">
         <procedure id="deploy-procedure" type="steps">
-            <step>
-                Once the version has been downloaded, extract the contents of the .zip into another folder.
+            <step> Once the version has been downloaded, extract the contents of the .zip into
+                another folder.
+            </step>
+
+            <step> Make sure that your computer has access to the internet as the deployment script
+                will need to download some dependencies.
             </step>
 
             <step>
-                Make sure that your computer has access to the internet as the deployment script will need to download
-                some dependencies.
-            </step>
-
-            <step>
-                <p>
-                    Inside the extracted folder, there should be a
+                <p> Inside the extracted folder, there should be a
                     <path>deploy.bat</path>
                     script.
-                    Run this script by double-clicking on it.
-                    If a window pops up, you may need to press run again.
+                    Run this script by double-clicking on it. If a window pops up, you may need to press run
+                    again.
                 </p>
-                <p>
-                    This will download the needed dependencies and compile the robot code.
-                    This step will result in a failure.
-                    However, this is expected.
-                </p>
+                <p> This will download the needed dependencies and compile the robot code. This
+                    step will result in a failure. However, this is expected. </p>
             </step>
 
             <step>
                 <snippet id="connect-to-wifi-snippet">
-                    <p>
-                        Turn the robot on if you have not already, and connect to the robot's Wi-Fi network.
-                        The Wi-Fi network's name should include <b>4537</b> and / or the robot's name.
-                    </p>
+                    <p> Turn the robot on if you have not already, and connect to the robot's Wi-Fi
+                        network. The Wi-Fi network's name should include <b>4537</b> and / or the robot's name. </p>
                     <note>
                         If the robot has just turned on, the network may take some time to appear.
                     </note>
                 </snippet>
             </step>
 
-            <step>
-                Re-run the
+            <step> Re-run the
                 <path>deploy.bat</path>
-                by double clicking on it. This time it should complete without errors and deploy the code to the robot.
+                by double clicking on it. This time it should
+                complete without errors and deploy the code to the robot.
             </step>
         </procedure>
     </chapter>
 
     <chapter id="running" title="Running the Code">
-        <p>
-            To run the code,
-            you will need a computer with <b>Windows 10 or higher</b> and the
-            <a href="https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#500107">FRC Game
-                Tools</a> from National Instruments.
-            If you are using the Driver Station Computer, all software will already be installed.
-        </p>
+        <p> To run the code, you will need a computer with <b>Windows 10 or higher</b> and the <a
+                href="https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#500107">FRC
+            Game Tools</a> from National Instruments. Click <a
+                href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html">
+            Here</a> for installation instructions. If you are using the Driver Station Computer, all
+            software will already be installed. </p>
 
-        <p>
-            You will also need the required controllers / joysticks to operate the robot.
-            See the robot-specific docs for the specific controller / joystick needed.
-        </p>
+        <p> You will also need the required controllers /
+            joysticks to operate the robot. See the robot-specific docs for the specific controller /
+            joystick needed. </p>
 
-        <note>
-            Some robots will have multiple options on what controllers can be used. E.g., <a
-                href="Hot-Calamari-2024.topic">Hot Calamari</a>
+        <note> Some robots will have multiple options on what controllers can
+            be used. E.g., <a
+                    href="Hot-Calamari-2024.topic">Hot Calamari</a>
         </note>
 
-        <chapter id="driver-station" title="Using the Driver Station">
+        <chapter
+                id="driver-station" title="Using the Driver Station">
             <procedure id="usage" title="Basic Usage" type="steps">
-                <step>
-                    Open the Driver Station application.
-                    <img alt="image.png" src="image.png"/>
+                <step> Open the Driver Station application. <img alt="image.png" src="image.png"/>
                 </step>
                 <step>
                     <include element-id="connect-to-wifi-snippet" from="Robot-Operation.topic">
                     </include>
-                    <p>You can verify that the robot has been successfully connected if the <b>No Robot
-                        Communication</b> message disappears.</p>
-                    <img alt="No Robot Communication" src="No_Robot_Communication_Image.png"/>
+                    <p>You can verify that the robot has been
+                        successfully connected if the <b>No Robot Communication</b> message disappears.</p>
+                    <img
+                            alt="No Robot Communication" src="No_Robot_Communication_Image.png"/>
                 </step>
                 <step>
-                    <p>
-                        Connect the required controllers to the Driver Station.
-                        The red box next to the
+                    <p> Connect the required controllers to the Driver Station. The red box next to
+                        the
                         <ui-path>Joystick</ui-path>
                         label should turn green.
                     </p>
-                    <note>
-                        The specific controller and port they go in can be found in the robot-specific docs.
+                    <note> The specific controller
+                        and port they go in can be found in the robot-specific docs.
                     </note>
                 </step>
                 <step>
-                    <p>
-                        Ensure that the
+                    <p> Ensure that the
                         <ui-path>TeleOperated</ui-path>
                         mode is selected.
                     </p>
-                    <img alt="TeleOperation Button" height="87" src="Driver_Station_Operation.png" width="144"/>
+                    <img
+                            alt="TeleOperation Button" height="87" src="Driver_Station_Operation.png"
+                            width="144"/>
                 </step>
-                <step>
-                    Complete any robot-specific setup.
-                </step>
-                <step>
-                    Make sure the robot is clear, and press the
+                <step> Complete any robot-specific setup.</step>
+                <step> Make sure the robot is clear, and press the
                     <ui-path>Enable</ui-path>
-                    button to start the robot.
-                    <img alt="Enable Button" height="70" src="Driver_Station_Enable_Button.png" width="180"/>
+                    button
+                    to start the robot. <img alt="Enable Button" height="70"
+                                             src="Driver_Station_Enable_Button.png" width="180"/>
                 </step>
             </procedure>
 
             <p>
-                For more information on the Driver Station Software,
-                click
-                <a href="https://docs.wpilib.org/en/stable/docs/software/driverstation/driver-station.html">here</a>.
-            </p>
+                For more information on the Driver Station Software, click <a
+                    href="https://docs.wpilib.org/en/stable/docs/software/driverstation/driver-station.html">
+                here</a>. </p>
         </chapter>
 
         <chapter id="safety" title="Safety">
-            <p>
-                When letting running the robot,
-                someone must be next to the Driver Station to disable the robot quickly.
-                The easiest method of doing this is to keep a hand on the
-                <shortcut>Enter</shortcut>
-                button.
-                This will immediately disable the robot.
-                If the situation is severe enough, press the
+            <p> When letting running the robot, someone must be next to the Driver Station to
+                disable the robot quickly. The easiest method of doing this is to keep a hand on the
+                <shortcut>
+                    Enter
+                </shortcut>
+                button. This will immediately disable the robot. If the situation is severe
+                enough, press the
                 <shortcut>Space</shortcut>
                 key to emergency stop the robot.
             </p>
 
             <note>
-                Once the robot has been emergency stopped,
-                the Driver Station will not allow the robot to be re-enabled again.
-                You will need to restart the robot or press the
+                Once the robot has been emergency stopped, the Driver Station will not allow the robot to be
+                re-enabled again. You will need to restart the robot or press the
                 <ui-path>Reset</ui-path>
                 button on the RoboRIO.
             </note>
-
-            When letting the public drive the robot,
-            ensure that the robot is running the
+            When letting the public drive the robot, ensure that the
+            robot is running the
             <emphasis>public</emphasis>
             version of the code.
         </chapter>
@@ -175,45 +149,36 @@
         <list>
             <li>
                 <b>Wi-Fi not found</b>
-                <p>
-                    Ensure that the robot is turned on, and the lights on the robot radio are on.
-                </p>
+                <p> Ensure that the robot is turned on, and the lights on the
+                    robot radio are on. </p>
                 <img alt="Robot Radio" height="198" src="RobotRadio.png" width="213"/>
             </li>
             <li>
                 <b>Robot won't move</b>
-                <p>
-                    If the robot isn't moving
-                    when the robot is
-                    <control>Enabled</control>
+                <p> If the robot isn't moving when the robot is
+                    <control>
+                        Enabled
+                    </control>
                     and in the
                     <control>TeleOperation</control>
-                    mode.
-                    The most common reason is
-                    that the controllers / joysticks are not setup correctly.
+                    mode. The most common reason
+                    is that the controllers / joysticks are not setup correctly.
                 </p>
-                <p>
-                    Make sure that the correct controllers are connected, and
-                    they are in the correct port in the Driver Station.
-                    <img alt="DriverStationPorts.png" src="DriverStationPorts.png"/>
-                    You can test
-                    if a controller is working properly
-                    by pressing buttons on the controller
-                    and seeing if the Driver Station shows that the button is pressed.
-                </p>
-                <p>
-                    Some robots also contain different profiles, make sure that the correct profile is selected.
-                    These can generally be set through the Shuffleboard.
-                </p>
+                <p> Make sure that the
+                    correct controllers are connected, and they are in the correct port in the Driver Station. <img
+                            alt="DriverStationPorts.png" src="DriverStationPorts.png"/> You can test if
+                    a controller is working properly by pressing buttons on the controller and seeing if the
+                    Driver Station shows that the button is pressed. </p>
+                <p> Some robots also contain different
+                    profiles, make sure that the correct profile is selected. These can generally be set through
+                    the Shuffleboard. </p>
             </li>
 
             <li>
                 <b>Parts of the robot are not working</b>
-                <p>
-                    If only parts of the robot are not moving / working,
-                    the robot may have a mechanical, electrical or software issue.
-                    You may need someone experienced with the robot to debug the issue.
-                </p>
+                <p> If only parts of the robot are not
+                    moving / working, the robot may have a mechanical, electrical or software issue. You may
+                    need someone experienced with the robot to debug the issue. </p>
             </li>
         </list>
     </chapter>

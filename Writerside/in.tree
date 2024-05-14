@@ -9,6 +9,8 @@
     <toc-element topic="Home.topic">
     </toc-element>
     <toc-element topic="Robot-Operation.topic">
+    </toc-element>
+    <toc-element toc-title="Our Robots">
         <toc-element topic="Hot-Calamari-2024.topic"/>
         <toc-element topic="Zooper-Dooper-2023.topic"/>
         <toc-element topic="Smashed-Avocado-2022.topic"/>

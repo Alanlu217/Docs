@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
-<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Hot Calamari 2024" id="Hot-Calamari-2024">
+<topic id="Hot-Calamari-2024"
+       title="Hot Calamari 2024"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-    <p>Start typing here...</p>
+    <chapter id="Hot-Calamari-Overview" title="Robot Overview">
+        <p>
+            Hot Calamari is the robot from the 2024-season
+            <a href="https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system">
+                Crescendo</a>.
+        </p>
+
+        <img alt="Hot Calamari" height="374" src="Hot_Calamari.jpg" width="500"/>
+
+        <chapter id="hot-calamari-subsystems" title="Subsystems">
+            <list>
+                <li>Swerve Drive</li>
+                <li>Shooter / Intake</li>
+                <li>Arm</li>
+                <li>Climber</li>
+            </list>
+        </chapter>
+
+        <chapter id="hot-calamari-controllers" title="Supported Controllers">
+            <chapter id="hot-calamari-driver-controllers" title="Driver Controllers">
+                <p>Driver controllers should be in slot 0 in the driver station</p>
+                <list>
+                    <li>Cool Joystick</li>
+                    <li>PS4 DualShock Controller</li>
+                    <li>XBox 360 Controller</li>
+                </list>
+            </chapter>
+            <chapter id="hot-calamari-operator-controllers" title="Operator Controllers">
+                <p>Operator controllers should be in slot 1 in the driver station</p>
+                <list>
+                    <li>Cool Joystick</li>
+                    <li>PS4 DualShock Controller</li>
+                    <li>XBox 360 Controller</li>
+                    <li>Sony Controller</li>
+                </list>
+            </chapter>
+        </chapter>
+    </chapter>
+
+    <chapter id="hot-calamari-operating" title="Operating">
+        <procedure id="hot-calamari-startup-procedure" title="Startup Procedure">
+            <step>
+                <p>
+                    Lift the arm up to reveal the battery holder, and plug a battery in.
+                </p>
+                <p>
+                    If the robots pneumatics system is still pressurized,
+                    (If it is, the arm will be tough to lift),
+                    you will need to either depressurize the system
+                    or activate the arm solenoid to lift the arm up.
+                </p>
+                <p>
+                    See <a anchor="hot-calamari-depressurization" href="Hot-Calamari-2024.topic">Depressurizing</a> and
+                    <a>Manually controlling the Pneumatics</a><!-- TODO -->
+                </p>
+            </step>
+            <step>
+                If the pneumatics exhaust was opened, close it by returning the red tab to a vertical position.
+            </step>
+            <step>
+                <p>
+                    Setup and connect the Driver Station.
+                </p>
+                <note>
+                    For supported controllers, see <a anchor="hot-calamari-controllers" href="Hot-Calamari-2024.topic"/>
+                </note>
+            </step>
+            <step>
+                <p>
+                    Open a browser and goto <a href="http://photonvision.local:5800/"/> or double-click on the Photon
+                    Vision
+                    shortcut on the Driver Station's Desktop.
+                </p>
+                <p>
+                    Find the brightness slider and change it from 40 to something else, then change it back to 40.
+                </p>
+                <note>
+                    This step is necessary due to a bug in Photon Vision where the brightness does not save properly.
+                </note>
+            </step>
+            <step>
+                <p>
+                    Enable the robot when ready and safe to do so.
+                </p>
+                <p>
+                    Once enabled, to initialize the swerve drive modules, press the
+                    <control>Initialize</control>
+                    button on the driver controller.
+                </p>
+                <p>
+                    Turn the robot until it is facing North relative to the driver.
+                    Then press the
+                    <control>Gyro Calibrate</control>
+                    button on the driver controller.
+                </p>
+                <note>
+                    For the specific buttons to press, see <a anchor="hot-calamari-driver-controllers"
+                                                              href="Hot-Calamari-2024.topic"/>
+                </note>
+            </step>
+            <step>
+                If necessary,
+                change the profile to the public version in the
+                <control>Profile</control>
+                tab in the Shuffleboard.
+            </step>
+        </procedure>
+
+        <procedure id="hot-calamari-depressurization" title="Depressurizing the robot">
+            <step>
+                Ensure the arm is in the
+                <control>Home</control>
+                position.
+                If not, you will need to be careful as the arm may fall down when depressurizing.
+            </step>
+            <step>
+                Locate the red tab located in the top left corner of the robot's back.
+            </step>
+            <step>
+                <p>
+                    Carefully and slowly turn the tab until it's horizontal.
+                    This will release the air through an exhaust pipe.
+                </p>
+
+                <warning>
+                    Be careful as this will release the air very quickly and will also make a loud sound.
+                </warning>
+            </step>
+        </procedure>
+    </chapter>
 </topic>
